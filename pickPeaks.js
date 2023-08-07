@@ -31,10 +31,10 @@ function pickPeaks(arr) {
           }
         }
         if (isPeak) {
-            isPeak = false
+          isPeak = false;
           for (let i = index - 1; i >= 0; i--) {
             if (number > arr[i]) {
-                isPeak = true;
+              isPeak = true;
               if (isPlateau) {
                 plateauStart = i + 1;
               }
@@ -64,13 +64,3 @@ function pickPeaks(arr) {
     { pos: [], peaks: [] }
   );
 }
-
-console.log(
-  pickPeaks(
-    [  3,  3, -2, 13, 15, 0, 15,  6,  0,  0,
-        2,  9, -4, 12, -1, 8,  2, 15, 15, 11,
-       14,  1, -2, 14, -4, 5, 13, -2, 14, 11,
-        2, 11,  0,  6,  9, 3,  7 
-  ])
-);
-
